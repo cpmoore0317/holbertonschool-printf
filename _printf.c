@@ -25,7 +25,7 @@ int print_integer(va_list varg)
 
 int _printf(const char *format, ...)
 {
-    int i, j, c, count = 0;
+    int j, c, i = 0, count = 0;
     va_list varg;
     type_f array[] = {
         {'s', print_string},
