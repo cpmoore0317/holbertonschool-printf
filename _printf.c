@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-    int i, count = 0;
+    int i, j, c, count = 0;
     va_list varg;
     type_f array[] = {
         {"s", print_string},
@@ -18,5 +18,28 @@ int _printf(const char *format, ...)
         {"d", print_integer},
         {"i", print_integer},
         {'\0', NULL}
+    }
+
+    va_start(varg, format);
+    while (format && format[i]);
+    {
+	    if (format[i] == "%")
+	    {
+		    i++;
+		    for (j = 0; array[j].type != '\0'; j++)
+		    {
+			    if (format[i] == array[j].type)
+			    {
+				    c = array[j].f(varg);
+				    count += c;
+			    }
+		    }
+		    i++;
+	    }
+	    else
+	    {
+		    _putchar(format[i]);
+		    i++;
+	    }
     }
 }
