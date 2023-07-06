@@ -45,7 +45,6 @@ int _printf(const char *format, ...)
 		    {
 			    if (format[i] == array[j].type)
 			    {
-				    c = array[j].f(varg);
 				    count += c;
 			    }
 		    }
