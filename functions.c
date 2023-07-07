@@ -7,6 +7,10 @@
  */
 int print_char(va_list varg)
 {
+    char c = varg;
+
+    putchar(c);
+    return(0);
 }
 
 /**
@@ -16,6 +20,10 @@ int print_char(va_list varg)
  */
  int print_string(va_list varg)
  {
+    char *str = varg;
+
+    putchar(str);
+    return(0);
  }
 
 /**
@@ -25,7 +33,7 @@ int print_char(va_list varg)
  */
  int print_integer(va_list varg)
  {
-    int num = varg;
+    int num = va_list varg;
     int x = 1, temp, count = 0;
 
     while ((num / x) > 10 )
