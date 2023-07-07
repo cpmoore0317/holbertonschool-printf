@@ -27,7 +27,7 @@ int print_char(va_list d)
     {
         putchar(str[i]);
         i++;
-        count++:
+        count++;
     }
     return(0);
  }
