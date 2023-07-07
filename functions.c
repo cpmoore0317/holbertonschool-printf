@@ -5,9 +5,9 @@
  * @varg: Arguments used in the function
  * Return: Returns a count to the main function
  */
-int print_char(va_list varg)
+int print_char(va_list d)
 {
-    char c = (char)varg;
+    char c = va_arg(d, int);
 
     putchar(c);
     return(0);
@@ -20,9 +20,14 @@ int print_char(va_list varg)
  */
  int print_string(va_list varg)
  {
-    char *str = (char)*varg;
+    char *str = va_arg(varg, char *);
+    int i = 0;
 
-    putchar(str);
+    while (str[i])
+    {
+        putchar(str[i]);
+        i++;
+    }
     return(0);
  }
 
@@ -33,7 +38,7 @@ int print_char(va_list varg)
  */
  int print_integer(va_list varg)
  {
-    int num = (int)varg;
+    long int num = va_arg(varg, long int);
     int x = 1, temp, count = 0;
 
     while ((num / x) > 10 )
@@ -53,4 +58,5 @@ int print_char(va_list varg)
     if (x == 1)
         return count;
     }
+    return (count);
  }
