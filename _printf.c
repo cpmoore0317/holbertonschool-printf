@@ -1,20 +1,5 @@
 #include "main.h"
 
-int print_string(va_list varg)
-{
-	return (0);
-}
-
-int print_char(va_list varg)
-{
-	return (0);
-}
-
-int print_integer(va_list varg)
-{
-	return (0);
-}
-
 /**
  * printf - This function prints char by char and input variables at specified place
  *
