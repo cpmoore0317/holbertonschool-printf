@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
     };
 
     va_start(varg, format);
-    while (format && format[i]) /*While function exists and not at '\0'*/
+    for (;format && format[i]; i++) /*While function exists and not at '\0'*/
     {
 	    if (format[i] == '%') /*If percent sign*/
 	    {
@@ -31,18 +31,18 @@ int _printf(const char *format, ...)
 			    if (format[i] == array[j].type) /*When letter after % = array.type*/
 					count += array[j].f(varg); /*Do function of that type*/
 				    /*count += c;*/ /*Add to count of chars printed*/
-			    else if (format[i] == '%')
-				    _putchar('%');
-			    else
-				    _putchar('%');
-			    		_putchar(format[i]);
 		    }
-		    i++; /*Iterate to next char in loop*/
+			if (format[i] == '%')
+				_putchar('%');
+			else
+			{
+				_putchar('%');
+				_putchar(format[i]);
+			}
 		}
 	    else
 	    {
 		    _putchar(format[i]); /* Write the regular char */
-		    i++; /*Iterate to next char in loop*/
 		    count++; /*Add to count of chars printed*/
 	    }
     }
