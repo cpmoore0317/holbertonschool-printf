@@ -32,13 +32,8 @@ int _printf(const char *format, ...)
 					count += array[j].f(varg); /*Do function of that type*/
 				    /*count += c;*/ /*Add to count of chars printed*/
 		    }
-			if (format[i] == '%')
-				_putchar('%');
-			else
-			{
-				_putchar('%');
-				_putchar(format[i]);
-			}
+			if (array[j].type == '\0')
+				count += print_edge(format[i]);
 		}
 	    else
 	    {

@@ -1,4 +1,16 @@
 #include "main.h"
+/**
+ */
+int print_edge(char e)
+{
+	if (char e == '%')
+		_putchar('%');
+		return (1);
+	else
+		_putchar('%');
+		_putchar(e);
+		return (2);
+}
 
 /**
  * print_char - Prints a character to the output
