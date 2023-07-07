@@ -11,7 +11,6 @@
 int _printf(const char *format, ...)
 {
     int j, i = 0, count = 0;
-	char letter;
     va_list varg;
     type_f array[] = {
         {'s', print_string},
