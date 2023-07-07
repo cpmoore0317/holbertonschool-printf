@@ -30,12 +30,8 @@ int _printf(const char *format, ...)
 		    {
 			    if (format[i] == array[j].type) /*When letter after % = array.type*/
 			    {
-					count += array[j].f(varg); /*Do function of that type*/
+					count += array[j].f(va_arg(varg)); /*Do function of that type*/
 				    /*count += c;*/ /*Add to count of chars printed*/
-			    }
-			    else if (format[i] == '%')
-			    {
-				    return (1);
 			    }
 		    }
 		    i++; /*Iterate to next char in loop*/
