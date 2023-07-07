@@ -9,7 +9,7 @@ int print_char(va_list d)
 {
     char c = va_arg(d, int);
 
-    putchar(c);
+    _putchar(c);
     return(1);
 }
 
@@ -25,7 +25,7 @@ int print_char(va_list d)
 
     while (str[i])
     {
-        putchar(str[i]);
+        _putchar(str[i]);
         i++;
         count++;
     }
@@ -49,7 +49,7 @@ int print_char(va_list d)
     for (; x >= 1; x /= 10)
     {
     temp = (num / x);
-    putchar(temp + 48);
+    _putchar(temp + 48);
     temp *= x;
     if (temp != 0)
     {
