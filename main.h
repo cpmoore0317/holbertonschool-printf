@@ -17,5 +17,6 @@ int _printf(const char *format, ...);
 int print_string(va_list varg);
 int print_char(va_list varg);
 int print_integer(va_list varg);
+int print_edge(char e);
 
 #endif /* MAIN_H */

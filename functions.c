@@ -3,13 +3,18 @@
  */
 int print_edge(char e)
 {
-	if (char e == '%')
+	if (e == '%')
+    {
 		_putchar('%');
 		return (1);
+    }
 	else
+    {
 		_putchar('%');
 		_putchar(e);
 		return (2);
+    }
+    return(0);
 }
 
 /**

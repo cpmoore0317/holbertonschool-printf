@@ -26,13 +26,13 @@ int _printf(const char *format, ...)
 	    if (format[i] == '%') /*If percent sign*/
 	    {
 		    i++; /*Go to next char to check function type*/
-		    for (j = 0; array[j].type != '\0'; j++) /*Check char against array.type*/
+		    for (j = 0; j <= 4; j++) /*Check char against array.type*/
 		    {
 			    if (format[i] == array[j].type) /*When letter after % = array.type*/
 					count += array[j].f(varg); /*Do function of that type*/
-				    /*count += c;*/ /*Add to count of chars printed*/
+				    continue;
 		    }
-			if (array[j].type == '\0')
+			if (j == 4)
 				count += print_edge(format[i]);
 		}
 	    else
