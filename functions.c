@@ -7,7 +7,7 @@
  */
 int print_char(va_list varg)
 {
-    char c = char (varg);
+    char c = (char)varg;
 
     putchar(c);
     return(0);
@@ -20,7 +20,7 @@ int print_char(va_list varg)
  */
  int print_string(va_list varg)
  {
-    char *str = char *(varg);
+    char *str = (char)*varg;
 
     putchar(str);
     return(0);
