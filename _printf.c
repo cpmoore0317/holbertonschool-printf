@@ -21,28 +21,28 @@ int _printf(const char *format, ...)
     };
 
     va_start(varg, format);
-    while (format && format[i])
+    while (format && format[i]) /*While function exists and not at '\0'*/
     {
-	    if (format[i] == '%')
+	    if (format[i] == '%') /*If percent sign*/
 	    {
-		    i++;
-		    for (j = 0; array[j].type != '\0'; j++)
+		    i++; /*Go to next char to check function type*/
+		    for (j = 0; array[j].type != '\0'; j++) /*Check char against array.type*/
 		    {
-			    if (format[i] == array[j].type)
+			    if (format[i] == array[j].type) /*When letter after % = array.type*/
 			    {
-					array[j].f(varg);
-				    count += c;
+					c = array[j].f(varg); /*Do function of that type*/
+				    count += c; /*Add to count of chars printed*/
 			    }
 		    }
-		    i++;
+		    i++; /*Iterate to next char in loop*/
 	    }
 	    else
 	    {
-		    _putchar(format[i]);
-		    i++;
-		    count++;
+		    _putchar(format[i]); /* Write the regular char */
+		    i++; /*Iterate to next char in loop*/
+		    count++; /*Add to count of chars printed*/
 	    }
     }
     va_end(varg);
-    return (count);
+    return (count); /*Returns count of total chars printed*/
 }
