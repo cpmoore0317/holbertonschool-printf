@@ -25,4 +25,24 @@ int print_char(va_list varg)
  */
  int print_integer(va_list varg)
  {
+    int num = varg;
+    int x = 1, temp, count = 0;
+
+    while ((num / x) > 10 )
+    {
+    x *= 10;
+    }
+    for (; x >= 1; x /= 10)
+    {
+    temp = (num / x);
+    putchar(temp + 48);
+    temp *= x;
+    if (temp != 0)
+    {
+        num = num % temp;
+    }
+    count += 1;
+    if (x == 1)
+        return count;
+    }
  }
