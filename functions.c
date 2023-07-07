@@ -10,7 +10,7 @@ int print_char(va_list d)
     char c = va_arg(d, int);
 
     putchar(c);
-    return(0);
+    return(1);
 }
 
 /**
@@ -21,12 +21,13 @@ int print_char(va_list d)
  int print_string(va_list varg)
  {
     char *str = va_arg(varg, char *);
-    int i = 0;
+    int i = 0, count = 0;
 
     while (str[i])
     {
         putchar(str[i]);
         i++;
+        count++:
     }
     return(0);
  }
