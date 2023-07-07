@@ -29,7 +29,7 @@ int print_char(va_list d)
         i++;
         count++;
     }
-    return(0);
+    return(count);
  }
 
 /**
@@ -57,7 +57,7 @@ int print_char(va_list d)
     }
     count += 1;
     if (x == 1)
-        return count;
+        return (count);
     }
     return (count);
  }
