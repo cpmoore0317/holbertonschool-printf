@@ -24,8 +24,7 @@ int _printf(const char *format, ...)
     va_start(varg, format);
     while (format && format[i]) /*While function exists and not at '\0'*/
     {
-		letter = (format[i]);
-	    if (letter == '%') /*If percent sign*/
+	    if (format[i] == '%') /*If percent sign*/
 	    {
 		    i++; /*Go to next char to check function type*/
 		    for (j = 0; array[j].type != '\0'; j++) /*Check char against array.type*/
