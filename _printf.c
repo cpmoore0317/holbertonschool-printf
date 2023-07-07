@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-    int j, c, i = 0, count = 0;
+    int j, c = 0, i = 0, count = 0;
     va_list varg;
     type_f array[] = {
         {'s', print_string},
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		    {
 			    if (format[i] == array[j].type)
 			    {
-					c = array[j].f(varg);
+					array[j].f(varg);
 				    count += c;
 			    }
 		    }
