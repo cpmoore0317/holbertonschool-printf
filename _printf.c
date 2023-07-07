@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		    for (j = 0; array[j].type != '\0'; j++) /*Check char against array.type*/
 		    {
 			    if (format[i] == array[j].type) /*When letter after % = array.type*/
-					count += array[j].f(va_arg(varg)); /*Do function of that type*/
+					count += array[j].f(va_arg(varg, va_list)); /*Do function of that type*/
 				    /*count += c;*/ /*Add to count of chars printed*/
 		    }
 		    i++; /*Iterate to next char in loop*/
