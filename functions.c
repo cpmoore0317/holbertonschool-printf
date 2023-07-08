@@ -19,7 +19,7 @@ int print_edge(char e)
 		_putchar(e);
 		return (2);
     }
-    return(0);
+    return (0);
 }
 
 /**
@@ -32,7 +32,7 @@ int print_char(va_list varg)
     char c = va_arg(varg, int);
 
     _putchar(c);
-    return(1);
+    return (1);
 }
 
 /**
@@ -40,8 +40,8 @@ int print_char(va_list varg)
  * @varg: Arguments used in function
  * Return: Returns a count to the main function
  */
- int print_string(va_list varg)
- {
+int print_string(va_list varg)
+{
     char *str = va_arg(varg, char *);
     int i = 0, count = 0;
 
@@ -56,35 +56,34 @@ int print_char(va_list varg)
         i++;
         count++;
     }
-    return(count);
- }
+    return (count);
+}
 
 /**
  * print_integer - Prints a string to the output
  * @varg: Arguments used in function
  * Return: Returns a count to the main function
  */
- int print_integer(va_list varg)
- {
+int print_integer(va_list varg)
+{
     long int num = va_arg(varg, long int);
     int x = 1, temp, count = 0;
 
     while ((num / x) > 10 )
-    {
-    x *= 10;
-    }
+        x *= 10;
+
     for (; x >= 1; x /= 10)
     {
-    temp = (num / x);
-    _putchar(temp + 48);
-    temp *= x;
-    if (temp != 0)
-    {
-        num = num % temp;
-    }
-    count += 1;
-    if (x == 1)
+        temp = (num / x);
+        _putchar(temp + 48);
+        temp *= x;
+        if (temp != 0)
+        {
+            num = num % temp;
+        }
+        count += 1;
+        if (x == 1)
         return (count);
     }
     return (count);
- }
+}
