@@ -19,8 +19,10 @@ int _printf(const char *format, ...)
         {'i', print_integer},
         {'\0', NULL}
     };
-
+	
     va_start(varg, format);
+	if (format == NULL)
+		return(-1);
     for (;format && format[i]; i++) /*While function exists and not at '\0'*/
     {
 	    if (format[i] == '%') /*If percent sign*/
