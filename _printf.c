@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			if (array[j].type == '\0')
+			if (array[j].type == '\0') /*If it cycles through array, edge case*/
 				count += print_edge(format[i]);
 		}
 		else

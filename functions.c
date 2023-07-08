@@ -6,16 +6,16 @@
  */
 int print_edge(char e)
 {
-	if (e == '\0')
+	if (e == '\0') /*If single %*/
 		return (-1);
-	else if (e == '%')
+	else if (e == '%') /*If %%*/
 	{
 		_putchar('%');
 		return (1);
 	}
 	else
 	{
-		_putchar('%');
+		_putchar('%'); /*If % and other char*/
 		_putchar(e);
 		return (2);
 	}
@@ -31,7 +31,7 @@ int print_char(va_list varg)
 {
 	char c = va_arg(varg, int);
 
-	_putchar(c);
+	_putchar(c); /*Print a single char*/
 	return (1);
 }
 
@@ -50,7 +50,7 @@ int print_string(va_list varg)
 		str = "(null)";
 	}
 
-	while (str[i])
+	while (str[i])  /*Cycle through string printing letter by letter*/
 	{
 		_putchar(str[i]);
 		i++;
@@ -69,20 +69,23 @@ int print_integer(va_list varg)
 	int num = va_arg(varg, long int);
 	int x = 1, temp, count = 0;
 
-	if (num < 0)
+	if (num < 0) /*For negative numbers*/
 	{
-		if (num == INT_MIN)
+		if (num == INT_MIN) /*Int min scenaria*/
 		{
-			_putchar('-');
-			_putchar(2 + 48);
-			num = num % 2000000000;
-			num *= -1;
+			/*Cant make int min positive,
+			 because int min is 1 larger than int max,
+			 must remove a number first*/
+			_putchar('-'); /*Print the -*/
+			_putchar(2 + 48);  /* Print the 2 in front*/
+			num = num % 2000000000; /*Remove the 2 from front*/
+			num *= -1; /*Makes it a positive integer under max int to flow thru*/
 			count += 2;
 		}
 		else
 		{
-			_putchar('-');
-			num *= -1;
+			_putchar('-'); /*puts the -*/
+			num *= -1; /*Makes integer positive to flow thru normal*/
 			count++;
 		}
 	}
