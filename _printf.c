@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '\0')
 				return (-1);
 			i++; /*Go to next char to check function type*/
-			for (j = 0; format[j] != '\0'; j++) /*Check char against array.type*/
+			for (j = 0; array[j].type != '\0'; j++) /*Check char against array.type*/
 			{
 				if (format[i] == array[j].type) /*When letter after % = array.type*/
 				{
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			if (format[j] == '\0')
+			if (array[j].type == '\0')
 				count += print_edge(format[i]);
 		}
 		else
