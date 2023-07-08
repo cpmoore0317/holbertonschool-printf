@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * printf - This function prints char by char and input variables at specified place
- *
+ * _printf - This function prints char by char and input variables at specified place
  * @format: This is the input information into printf, starts and ends with ""
  *
  * Return: Returns a count of how many chars were used.
