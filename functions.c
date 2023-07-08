@@ -75,7 +75,7 @@ int print_integer(va_list varg)
 		num *= -1;
 	}
 
-	while ((num / x) > 10) /*Gets x to the highest number needed*/
+	while ((num / x) > 9) /*Gets x to the highest number needed*/
 		x *= 10;
 
 	for (; x >= 1; x /= 10) /*Makes x divide by 10 per loop*/
