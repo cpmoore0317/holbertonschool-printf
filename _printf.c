@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - This function prints char by char and input variables at specified place
+ * _printf - This function prints char by char and input variables
  * @format: This is the input information into printf, starts and ends with ""
  *
  * Return: Returns a count of how many chars were used.
@@ -18,11 +18,11 @@ int _printf(const char *format, ...)
 		{'i', print_integer},
 		{'\0', NULL}
 	};
-	
+
 	va_start(varg, format);
 	if (format == NULL)
-		return(-1);
-	for (;format && format[i]; i++) /*While function exists and not at '\0'*/
+		return (-1);
+	for (; format && format[i]; i++) /*While function exists and not at '\0'*/
 	{
 		if (format[i] == '%') /*If percent sign*/
 		{
