@@ -40,6 +40,17 @@ int print_char(va_list d)
     char *str = va_arg(varg, char *);
     int i = 0, count = 0;
 
+    if (str == NULL)
+    {
+        _putchar('(');
+        _putchar('n');
+        _putchar('u');
+        _putchar('l');
+        _putchar('l');
+        _putchar(')');
+        count += 6;
+    }
+
     while (str[i])
     {
         _putchar(str[i]);
