@@ -71,9 +71,20 @@ int print_integer(va_list varg)
 
 	if (num < 0)
 	{
-		_putchar('-');
-		num *= -1;
-		count++;
+		if (num == INT_MIN)
+		{
+			_putchar('-');
+			_putchar(2 + 48);
+			num = num % 2000000000;
+			num *= -1;
+			count += 2;
+		}
+		else
+		{
+			_putchar('-');
+			num *= -1;
+			count++;
+		}
 	}
 
 	while ((num / x) > 9) /*Gets x to the highest number needed*/
