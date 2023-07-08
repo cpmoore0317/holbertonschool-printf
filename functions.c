@@ -47,13 +47,7 @@ int print_char(va_list varg)
 
     if (str == NULL)
     {
-        _putchar('(');
-        _putchar('n');
-        _putchar('u');
-        _putchar('l');
-        _putchar('l');
-        _putchar(')');
-        count += 6;
+        str = "(null)";
     }
 
     while (str[i])
