@@ -27,6 +27,8 @@ int _printf(const char *format, ...)
     {
 	    if (format[i] == '%') /*If percent sign*/
 	    {
+			if (format[i + 1] == '\0')
+				return (-1);
 		    i++; /*Go to next char to check function type*/
 		    for (j = 0; format[j] != '\0'; j++) /*Check char against array.type*/
 		    {
