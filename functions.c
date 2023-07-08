@@ -1,9 +1,14 @@
 #include "main.h"
 /**
+ * print_edge - Prints special characters such as '%' and '!'
+ * @e: Character after the %
+ * Return: Returns number based on input
  */
 int print_edge(char e)
 {
-	if (e == '%')
+	if (e == '\0')
+		return (-1);
+	else if (e == '%')
     {
 		_putchar('%');
 		return (1);
@@ -22,9 +27,9 @@ int print_edge(char e)
  * @varg: Arguments used in the function
  * Return: Returns a count to the main function
  */
-int print_char(va_list d)
+int print_char(va_list varg)
 {
-    char c = va_arg(d, int);
+    char c = va_arg(varg, int);
 
     _putchar(c);
     return(1);
@@ -33,7 +38,7 @@ int print_char(va_list d)
 /**
  * print_string - Prints a string to the output
  * @varg: Arguments used in function
- * Returns a count to the main function
+ * Return: Returns a count to the main function
  */
  int print_string(va_list varg)
  {
@@ -63,7 +68,7 @@ int print_char(va_list d)
 /**
  * print_integer - Prints a string to the output
  * @varg: Arguments used in function
- * Returns a count to the main function
+ * Return: Returns a count to the main function
  */
  int print_integer(va_list varg)
  {
