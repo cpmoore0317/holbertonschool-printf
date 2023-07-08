@@ -69,7 +69,7 @@ int print_integer(va_list varg)
 	long int num = va_arg(varg, long int);
 	int x = 1, temp, count = 0;
 
-	while ((num / x) > 10 )
+	while ((num / x) > 10)
 		x *= 10;
 
 	for (; x >= 1; x /= 10)
