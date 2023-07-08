@@ -69,21 +69,21 @@ int print_integer(va_list varg)
 	long int num = va_arg(varg, long int);
 	int x = 1, temp, count = 0;
 
-	while ((num / x) > 10)
+	while ((num / x) > 10 ) /*Gets x to the highest number needed*/
 		x *= 10;
 
-	for (; x >= 1; x /= 10)
+	for (; x >= 1; x /= 10) /*Makes x divide by 10 per loop*/
 	{
-		temp = (num / x);
-		_putchar(temp + 48);
-		temp *= x;
-		if (temp != 0)
+		temp = (num / x); /*Make temp equal current first number on int*/
+		_putchar(temp + 48); /*Print first number on int*/
+		temp *= x; /*Makes temp number to divide by*/
+		if (temp != 0) /*If temp equals 0 skips this step*/
 		{
-			num = num % temp;
+			num = num % temp; /*New num is last num removing first number */
 		}
-		count += 1;
+		count += 1; /*Adds a count to return*/
 		if (x == 1)
-			return (count);
+		return (count);
 	}
 	return (count);
 }
