@@ -66,13 +66,14 @@ int print_string(va_list varg)
  */
 int print_integer(va_list varg)
 {
-	long int num = va_arg(varg, long int);
+	int num = va_arg(varg, long int);
 	int x = 1, temp, count = 0;
 
 	if (num < 0)
 	{
 		_putchar('-');
 		num *= -1;
+		count++;
 	}
 
 	while ((num / x) > 9) /*Gets x to the highest number needed*/
