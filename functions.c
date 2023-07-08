@@ -73,9 +73,9 @@ int print_integer(va_list varg)
 	{
 		if (num == INT_MIN) /*Int min scenaria*/
 		{
-			/*Cant make int min positive,
-			 because int min is 1 larger than int max,
-			 must remove a number first*/
+			/*Cant make int min positive, */
+			/*because int min is 1 larger than int max, */
+			/*must remove a number first*/
 			_putchar('-'); /*Print the -*/
 			_putchar(2 + 48);  /* Print the 2 in front*/
 			num = num % 2000000000; /*Remove the 2 from front*/
@@ -89,7 +89,6 @@ int print_integer(va_list varg)
 			count++;
 		}
 	}
-
 	while ((num / x) > 9) /*Gets x to the highest number needed*/
 		x *= 10;
 
