@@ -1,92 +1,50 @@
 # NAME
-`c
 
-``c
 `_printf` - formatted output
-``c
 
-`## SYNOPSIS
-`c
+## SYNOPSIS
 
-``c
 `_printf` [options] format [arguments]
-``c
 
-`## DESCRIPTION
-`c
+## DESCRIPTION
 
-``c
 The `_printf` function prints formatted output to std-out.
-``c
 The format string is a string that contains special
-``c
 sequences that are replaced with the corresponding arguments.
-``c
 
-`## OPTIONS
-`c
+## OPTIONS
 
-``c
 -c: Prints the argument as a character.
-``c
 -d: Prints the argument as a decimal number.
-``c
 -i: Prints the argument as an  integer.
-``c
 -s: Prints the argument as a string.
-``c
 
-`## FORMAT SEQUNCES
-`c
+## FORMAT SEQUNCES
 
-``c
 %c: Prints  the argument as a character.
-``c
 %d: Prints the argument as a decimal number.
-``c
 %i: Prints the argument as an integer.
-``c
 %s: Prints the argument as a string.
-``c
 
-`## EXAMPLES
-`c
+## EXAMPLES
 
-``c
 `_printf`("The character 'a' is %c.0, 'a');
-``c
 `_printf`("The decimal number 123 is %d.0, 123);
-``c
 `_printf`("The integer  123  is %i.0,  123);
-``c
 `_printf`("The string "Hello, world!" is %s.0, "Hello, world!");
-``c
 
-`## RETURN VALUE
-`c
+## RETURN VALUE
 
-``c
 The `_printf` function returns the number  of  characters
-``c
 printed, not including the terminating null byte (' ').
-``c
 
-`## ERRORS
-`c
+## ERRORS
 
-``c
 The `_printf` function may fail for the following reasons:
-``c
 * The format string is invalid.
-``c
 * The output buffer is too  small.
-``c
 * An error occurs while accessing the file system.
-``c
 
-`## AUTHOURS
-`c
+## AUTHOURS
 
-``c
 By Ethan Zalta and Parker Moore
-`

@@ -1,4 +1,4 @@
-## ** `_printf` Function**
+## `_printf` Function
 
 The `_printf` function prints formatted output to stdout.
 The format string is a string that contains special sequences
