@@ -35,7 +35,6 @@ ERRORS
 
 The `_printf` function may fail for the following reasons:
 * The format string is invalid.
-* The output buffer is too  small.
 * An error occurs while accessing the file system.
 
 AUTHOURS
