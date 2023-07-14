@@ -4,20 +4,13 @@
 
 ## SYNOPSIS
 
-`_printf` [options] format [arguments]
+`_printf` format [arguments]
 
 ## DESCRIPTION
 
 The `_printf` function prints formatted output to std-out.
 The format string is a string that contains special
 sequences that are replaced with the corresponding arguments.
-
-## OPTIONS
-
--c: Prints the argument as a character.
--d: Prints the argument as a decimal number.
--i: Prints the argument as an  integer.
--s: Prints the argument as a string.
 
 ## FORMAT SEQUNCES
 
@@ -42,7 +35,6 @@ printed, not including the terminating null byte (' ').
 
 The `_printf` function may fail for the following reasons:
 * The format string is invalid.
-* The output buffer is too  small.
 * An error occurs while accessing the file system.
 
 ## AUTHOURS
